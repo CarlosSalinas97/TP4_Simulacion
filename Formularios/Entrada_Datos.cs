@@ -44,6 +44,7 @@ namespace TP4
                     tabla_vendedor_1.ImportRow(simulador.vendedor_1.Rows[i-1]);
                 }
 
+                tabla_vendedor_1.ImportRow(simulador.vendedor_1.Rows[N-1]);
                 btn_ver_tabla.Enabled = true;
             }
             
