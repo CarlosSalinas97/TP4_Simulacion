@@ -17,7 +17,7 @@ namespace TP4
         private int N;
         private int desde;
         private int hasta;
-        DataTable vendedor_1;
+        DataTable tabla_vendedor_1;
 
         public Entrada_Datos()
         {
@@ -27,14 +27,23 @@ namespace TP4
         private void Entrada_Datos_Load(object sender, EventArgs e)
         {
             btn_ver_tabla.Enabled = false;
+            
         }
 
         private void btn_simular_Click(object sender, EventArgs e)
         {
             if (validar_y_asignar_campos())
             {
+                tabla_vendedor_1 = new DataTable();
+                generar_columnas(tabla_vendedor_1);
+                btn_ver_tabla.Enabled = false;
                 Simulacion_Montecarlo simulador = new Simulacion_Montecarlo(N, desde, hasta);
-                vendedor_1 = simulador.generar_simulacion();
+                for (int i = desde; i <= hasta; i++)
+                {
+                    int rango = hasta - desde;
+                    tabla_vendedor_1.ImportRow(simulador.vendedor_1.Rows[i-1]);
+                }
+
                 btn_ver_tabla.Enabled = true;
             }
             
@@ -42,7 +51,7 @@ namespace TP4
 
         private void btn_ver_tabla_Click(object sender, EventArgs e)
         {
-            Tabla_Montecarlo tabla_montecarlo_form = new Tabla_Montecarlo(vendedor_1);
+            Tabla_Montecarlo tabla_montecarlo_form = new Tabla_Montecarlo(tabla_vendedor_1);
             tabla_montecarlo_form.Show();
         }
 
@@ -57,6 +66,21 @@ namespace TP4
                 N = int.Parse(txt_N.Text);
                 desde = int.Parse(txt_desde.Text);
                 hasta = int.Parse(txt_hasta.Text);
+                if (desde > N)
+                {
+                    MessageBox.Show("El rango mínimo 'desde' no puede ser mayor a la cantidad de semanas a simular.");
+                    return false;
+                }
+                if (hasta < desde)
+                {
+                    MessageBox.Show("El rango máximo 'hasta' no puede ser menor a 'desde'.");
+                    return false;
+                }
+                if (hasta > N)
+                {
+                    MessageBox.Show("El rango máximo 'hasta' no puede ser mayor a la cantidad de semanas a simular.");
+                    return false;
+                }
                 return true;
             }
 
@@ -88,6 +112,31 @@ namespace TP4
             {
                 e.Handled = true;
             }
+        }
+
+        private void generar_columnas(DataTable dataTable)
+        {
+            dataTable.Columns.Add("Reloj (semanas)", typeof(int));
+            dataTable.Columns.Add("RND-AV", typeof(string));
+            dataTable.Columns.Add("Autos vendidos", typeof(string));
+            dataTable.Columns.Add("RND-A1", typeof(string));
+            dataTable.Columns.Add("Auto 1", typeof(string));
+            dataTable.Columns.Add("RND-A2", typeof(string));
+            dataTable.Columns.Add("Auto 2", typeof(string));
+            dataTable.Columns.Add("RND-A3", typeof(string));
+            dataTable.Columns.Add("Auto 3", typeof(string));
+            dataTable.Columns.Add("RND-A4", typeof(string));
+            dataTable.Columns.Add("Auto 4", typeof(string));
+            dataTable.Columns.Add("RND-C1", typeof(string));
+            dataTable.Columns.Add("Comision 1", typeof(string));
+            dataTable.Columns.Add("RND-C2", typeof(string));
+            dataTable.Columns.Add("Comision 2", typeof(string));
+            dataTable.Columns.Add("RND-C3", typeof(string));
+            dataTable.Columns.Add("Comision 3", typeof(string));
+            dataTable.Columns.Add("RND-C4", typeof(string));
+            dataTable.Columns.Add("Comision 4", typeof(string));
+            dataTable.Columns.Add("Comision total", typeof(int));
+            dataTable.Columns.Add("Comision total AC", typeof(int));
         }
     }
 }

@@ -22,6 +22,7 @@ namespace TP4
         private void Tabla_Montecarlo_Load(object sender, EventArgs e)
         {
             data_vendedor_1.DataSource = vendedor1;
+            data_vendedor_1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
     }
 }

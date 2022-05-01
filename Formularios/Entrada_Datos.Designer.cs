@@ -38,7 +38,6 @@
             this.txt_hasta = new System.Windows.Forms.TextBox();
             this.btn_simular = new System.Windows.Forms.Button();
             this.btn_ver_tabla = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // label1
@@ -124,7 +123,7 @@
             // btn_simular
             // 
             this.btn_simular.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_simular.Location = new System.Drawing.Point(181, 217);
+            this.btn_simular.Location = new System.Drawing.Point(181, 246);
             this.btn_simular.Name = "btn_simular";
             this.btn_simular.Size = new System.Drawing.Size(97, 30);
             this.btn_simular.TabIndex = 3;
@@ -135,7 +134,7 @@
             // btn_ver_tabla
             // 
             this.btn_ver_tabla.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ver_tabla.Location = new System.Drawing.Point(284, 217);
+            this.btn_ver_tabla.Location = new System.Drawing.Point(284, 246);
             this.btn_ver_tabla.Name = "btn_ver_tabla";
             this.btn_ver_tabla.Size = new System.Drawing.Size(97, 30);
             this.btn_ver_tabla.TabIndex = 4;
@@ -143,19 +142,11 @@
             this.btn_ver_tabla.UseVisualStyleBackColor = true;
             this.btn_ver_tabla.Click += new System.EventHandler(this.btn_ver_tabla_Click);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 253);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(367, 23);
-            this.progressBar1.TabIndex = 10;
-            // 
             // Entrada_Datos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 288);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btn_ver_tabla);
             this.Controls.Add(this.btn_simular);
             this.Controls.Add(this.txt_hasta);
@@ -187,6 +178,5 @@
         private System.Windows.Forms.TextBox txt_hasta;
         private System.Windows.Forms.Button btn_simular;
         private System.Windows.Forms.Button btn_ver_tabla;
-        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
