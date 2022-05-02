@@ -34,10 +34,19 @@ namespace TP4
             btn_ver_tabla_vendedor2.Enabled = false;
             btn_ver_tabla_vendedor3.Enabled = false;
             btn_ver_tabla_vendedor4.Enabled = false;
+
+            lbl_vendedor1.Text = "Comisión promedio Vendedor 1: $";
+            lbl_vendedor2.Text = "Comisión promedio Vendedor 2: $";
+            lbl_vendedor3.Text = "Comisión promedio Vendedor 3: $";
+            lbl_vendedor4.Text = "Comisión promedio Vendedor 4: $";
         }
 
         private void btn_simular_Click(object sender, EventArgs e)
         {
+            lbl_vendedor1.Text = "Comisión promedio Vendedor 1: $";
+            lbl_vendedor2.Text = "Comisión promedio Vendedor 2: $";
+            lbl_vendedor3.Text = "Comisión promedio Vendedor 3: $";
+            lbl_vendedor4.Text = "Comisión promedio Vendedor 4: $";
             if (validar_y_asignar_campos())
             {
                 tabla_vendedor_1 = new DataTable();
@@ -76,14 +85,14 @@ namespace TP4
                 btn_ver_tabla_vendedor4.Enabled = true;
 
                 //MessageBox.Show(simulador.vendedor_1.Rows[N - 1]["Comision total AC"].ToString());
-                double pv1 = double.Parse(simulador.vendedor_1.Rows[N - 1]["Comision total AC"].ToString()) / N;
-                double pv2 = double.Parse(simulador.vendedor_2.Rows[N - 1]["Comision total AC"].ToString()) / N;
-                double pv3 = double.Parse(simulador.vendedor_3.Rows[N - 1]["Comision total AC"].ToString()) / N;
-                double pv4 = double.Parse(simulador.vendedor_4.Rows[N - 1]["Comision total AC"].ToString()) / N;
-                lbl_vendedor1.Text = "Comision promedio Vendedor 1: " + pv1.ToString();
-                lbl_vendedor2.Text = "Comision promedio Vendedor 2: " + pv2.ToString();
-                lbl_vendedor3.Text = "Comision promedio Vendedor 3: " + pv3.ToString();
-                lbl_vendedor4.Text = "Comision promedio Vendedor 4: " + pv4.ToString();
+                double pv1 = redondear(double.Parse(simulador.vendedor_1.Rows[N - 1]["Comision total AC"].ToString()) / N);
+                double pv2 = redondear(double.Parse(simulador.vendedor_2.Rows[N - 1]["Comision total AC"].ToString()) / N);
+                double pv3 = redondear(double.Parse(simulador.vendedor_3.Rows[N - 1]["Comision total AC"].ToString()) / N);
+                double pv4 = redondear(double.Parse(simulador.vendedor_4.Rows[N - 1]["Comision total AC"].ToString()) / N);
+                lbl_vendedor1.Text += pv1.ToString();
+                lbl_vendedor2.Text += pv2.ToString();
+                lbl_vendedor3.Text += pv3.ToString();
+                lbl_vendedor4.Text += pv4.ToString();
 
             }
             
@@ -216,6 +225,11 @@ namespace TP4
             Tabla_Montecarlo tabla_montecarlo_form_v4 = new Tabla_Montecarlo(tabla_vendedor_4);
             tabla_montecarlo_form_v4.Text = tabla_montecarlo_form_v4.Text + " " + "Vendedor 4";
             tabla_montecarlo_form_v4.Show();
+        }
+
+        private double redondear(double value)
+        {
+            return Math.Truncate(value * 100) / 100;
         }
     }
 }
