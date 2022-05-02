@@ -63,10 +63,10 @@ namespace TP4
                 btn_ver_tabla_vendedor2.Enabled = false;
                 btn_ver_tabla_vendedor3.Enabled = false;
                 btn_ver_tabla_vendedor4.Enabled = false;
-                Simulacion_Montecarlo simulador = new Simulacion_Montecarlo(N, desde, hasta);
+                Simulacion_Montecarlo simulador = new Simulacion_Montecarlo(N);
+
                 for (int i = desde; i <= hasta; i++)
                 {
-                    int rango = hasta - desde;
                     tabla_vendedor_1.ImportRow(simulador.vendedor_1.Rows[i-1]);
                     tabla_vendedor_2.ImportRow(simulador.vendedor_2.Rows[i - 1]);
                     tabla_vendedor_3.ImportRow(simulador.vendedor_3.Rows[i - 1]);
@@ -100,18 +100,10 @@ namespace TP4
 
         private void btn_ver_tabla_Click(object sender, EventArgs e)
         {
-            Tabla_Montecarlo tabla_montecarlo_form_v1 = new Tabla_Montecarlo(tabla_vendedor_1);
-            tabla_montecarlo_form_v1.Text = tabla_montecarlo_form_v1.Text + " " + "Vendedor 1";
-            Tabla_Montecarlo tabla_montecarlo_form_v2 = new Tabla_Montecarlo(tabla_vendedor_2);
-            tabla_montecarlo_form_v2.Text = tabla_montecarlo_form_v2.Text + " " + "Vendedor 2";
-            Tabla_Montecarlo tabla_montecarlo_form_v3 = new Tabla_Montecarlo(tabla_vendedor_3);
-            tabla_montecarlo_form_v3.Text = tabla_montecarlo_form_v3.Text + " " + "Vendedor 3";
-            Tabla_Montecarlo tabla_montecarlo_form_v4 = new Tabla_Montecarlo(tabla_vendedor_4);
-            tabla_montecarlo_form_v4.Text = tabla_montecarlo_form_v4.Text + " " + "Vendedor 4";
-            tabla_montecarlo_form_v1.Show();
-            tabla_montecarlo_form_v2.Show();
-            tabla_montecarlo_form_v3.Show();
-            tabla_montecarlo_form_v4.Show();
+            mostrar_tabla_vendedor1();
+            mostrar_tabla_vendedor2();
+            mostrar_tabla_vendedor3();
+            mostrar_tabla_vendedor4();
         }
 
         private bool validar_y_asignar_campos()
@@ -200,12 +192,22 @@ namespace TP4
 
         private void btn_ver_tabla_vendedor1_Click(object sender, EventArgs e)
         {
+            mostrar_tabla_vendedor1();
+        }
+
+        private void mostrar_tabla_vendedor1()
+        {
             Tabla_Montecarlo tabla_montecarlo_form_v1 = new Tabla_Montecarlo(tabla_vendedor_1);
             tabla_montecarlo_form_v1.Text = tabla_montecarlo_form_v1.Text + " " + "Vendedor 1";
             tabla_montecarlo_form_v1.Show();
         }
 
         private void btn_ver_tabla_vendedor2_Click(object sender, EventArgs e)
+        {
+            mostrar_tabla_vendedor2();
+        }
+
+        private void mostrar_tabla_vendedor2()
         {
             Tabla_Montecarlo tabla_montecarlo_form_v2 = new Tabla_Montecarlo(tabla_vendedor_2);
             tabla_montecarlo_form_v2.Text = tabla_montecarlo_form_v2.Text + " " + "Vendedor 2";
@@ -214,13 +216,22 @@ namespace TP4
 
         private void btn_ver_tabla_vendedor3_Click(object sender, EventArgs e)
         {
+            mostrar_tabla_vendedor3();
+        }
+
+        private void mostrar_tabla_vendedor3()
+        {
             Tabla_Montecarlo tabla_montecarlo_form_v3 = new Tabla_Montecarlo(tabla_vendedor_3);
             tabla_montecarlo_form_v3.Text = tabla_montecarlo_form_v3.Text + " " + "Vendedor 3";
             tabla_montecarlo_form_v3.Show();
-
         }
 
         private void btn_ver_tabla_vendedor4_Click(object sender, EventArgs e)
+        {
+            mostrar_tabla_vendedor4();
+        }
+
+        private void mostrar_tabla_vendedor4()
         {
             Tabla_Montecarlo tabla_montecarlo_form_v4 = new Tabla_Montecarlo(tabla_vendedor_4);
             tabla_montecarlo_form_v4.Text = tabla_montecarlo_form_v4.Text + " " + "Vendedor 4";

@@ -11,28 +11,22 @@ namespace TP4.Clases
     {
         Random random = new Random();
         private int N;
-        private int desde;
-        private int hasta;
         public DataTable vendedor_1;
         public DataTable vendedor_2;
         public DataTable vendedor_3;
         public DataTable vendedor_4;
-        DataTable resumen_ventas;
         DataTable autos_vendidos;
         DataTable tipo_auto;
         DataTable comision_mediano;
         DataTable comision_lujo;
 
-        public Simulacion_Montecarlo(int N, int desde, int hasta)
+        public Simulacion_Montecarlo(int N)
         {
             this.N = N;
-            this.desde = desde;
-            this.hasta = hasta;
             vendedor_1 = new DataTable();
             vendedor_2 = new DataTable();
             vendedor_3 = new DataTable();
             vendedor_4 = new DataTable();
-            resumen_ventas = new DataTable();
             autos_vendidos = probabilidad_autos_vendidos();
             tipo_auto = probabilidad_tipo_auto_vendido();
             comision_mediano = probabilidad_comision_mediano();
