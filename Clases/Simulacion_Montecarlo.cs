@@ -14,9 +14,9 @@ namespace TP4.Clases
         private int desde;
         private int hasta;
         public DataTable vendedor_1;
-        DataTable vendedor_2;
-        DataTable vendedor_3;
-        DataTable vendedor_4;
+        public DataTable vendedor_2;
+        public DataTable vendedor_3;
+        public DataTable vendedor_4;
         DataTable resumen_ventas;
         DataTable autos_vendidos;
         DataTable tipo_auto;

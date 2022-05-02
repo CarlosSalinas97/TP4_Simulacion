@@ -38,6 +38,14 @@
             this.txt_hasta = new System.Windows.Forms.TextBox();
             this.btn_simular = new System.Windows.Forms.Button();
             this.btn_ver_tabla = new System.Windows.Forms.Button();
+            this.btn_ver_tabla_vendedor1 = new System.Windows.Forms.Button();
+            this.btn_ver_tabla_vendedor2 = new System.Windows.Forms.Button();
+            this.btn_ver_tabla_vendedor3 = new System.Windows.Forms.Button();
+            this.btn_ver_tabla_vendedor4 = new System.Windows.Forms.Button();
+            this.lbl_vendedor1 = new System.Windows.Forms.Label();
+            this.lbl_vendedor2 = new System.Windows.Forms.Label();
+            this.lbl_vendedor3 = new System.Windows.Forms.Label();
+            this.lbl_vendedor4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -123,9 +131,9 @@
             // btn_simular
             // 
             this.btn_simular.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_simular.Location = new System.Drawing.Point(181, 246);
+            this.btn_simular.Location = new System.Drawing.Point(12, 187);
             this.btn_simular.Name = "btn_simular";
-            this.btn_simular.Size = new System.Drawing.Size(97, 30);
+            this.btn_simular.Size = new System.Drawing.Size(173, 30);
             this.btn_simular.TabIndex = 3;
             this.btn_simular.Text = "Simular";
             this.btn_simular.UseVisualStyleBackColor = true;
@@ -134,19 +142,107 @@
             // btn_ver_tabla
             // 
             this.btn_ver_tabla.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ver_tabla.Location = new System.Drawing.Point(284, 246);
+            this.btn_ver_tabla.Location = new System.Drawing.Point(191, 187);
             this.btn_ver_tabla.Name = "btn_ver_tabla";
-            this.btn_ver_tabla.Size = new System.Drawing.Size(97, 30);
+            this.btn_ver_tabla.Size = new System.Drawing.Size(173, 30);
             this.btn_ver_tabla.TabIndex = 4;
-            this.btn_ver_tabla.Text = "Ver tabla";
+            this.btn_ver_tabla.Text = "Ver tablas";
             this.btn_ver_tabla.UseVisualStyleBackColor = true;
             this.btn_ver_tabla.Click += new System.EventHandler(this.btn_ver_tabla_Click);
+            // 
+            // btn_ver_tabla_vendedor1
+            // 
+            this.btn_ver_tabla_vendedor1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ver_tabla_vendedor1.Location = new System.Drawing.Point(12, 223);
+            this.btn_ver_tabla_vendedor1.Name = "btn_ver_tabla_vendedor1";
+            this.btn_ver_tabla_vendedor1.Size = new System.Drawing.Size(173, 30);
+            this.btn_ver_tabla_vendedor1.TabIndex = 5;
+            this.btn_ver_tabla_vendedor1.Text = "Ver Tabla vendedor 1";
+            this.btn_ver_tabla_vendedor1.UseVisualStyleBackColor = true;
+            this.btn_ver_tabla_vendedor1.Click += new System.EventHandler(this.btn_ver_tabla_vendedor1_Click);
+            // 
+            // btn_ver_tabla_vendedor2
+            // 
+            this.btn_ver_tabla_vendedor2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ver_tabla_vendedor2.Location = new System.Drawing.Point(12, 259);
+            this.btn_ver_tabla_vendedor2.Name = "btn_ver_tabla_vendedor2";
+            this.btn_ver_tabla_vendedor2.Size = new System.Drawing.Size(173, 30);
+            this.btn_ver_tabla_vendedor2.TabIndex = 6;
+            this.btn_ver_tabla_vendedor2.Text = "Ver Tabla vendedor 2";
+            this.btn_ver_tabla_vendedor2.UseVisualStyleBackColor = true;
+            this.btn_ver_tabla_vendedor2.Click += new System.EventHandler(this.btn_ver_tabla_vendedor2_Click);
+            // 
+            // btn_ver_tabla_vendedor3
+            // 
+            this.btn_ver_tabla_vendedor3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ver_tabla_vendedor3.Location = new System.Drawing.Point(12, 295);
+            this.btn_ver_tabla_vendedor3.Name = "btn_ver_tabla_vendedor3";
+            this.btn_ver_tabla_vendedor3.Size = new System.Drawing.Size(173, 30);
+            this.btn_ver_tabla_vendedor3.TabIndex = 7;
+            this.btn_ver_tabla_vendedor3.Text = "Ver Tabla vendedor 3";
+            this.btn_ver_tabla_vendedor3.UseVisualStyleBackColor = true;
+            this.btn_ver_tabla_vendedor3.Click += new System.EventHandler(this.btn_ver_tabla_vendedor3_Click);
+            // 
+            // btn_ver_tabla_vendedor4
+            // 
+            this.btn_ver_tabla_vendedor4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ver_tabla_vendedor4.Location = new System.Drawing.Point(12, 331);
+            this.btn_ver_tabla_vendedor4.Name = "btn_ver_tabla_vendedor4";
+            this.btn_ver_tabla_vendedor4.Size = new System.Drawing.Size(173, 30);
+            this.btn_ver_tabla_vendedor4.TabIndex = 8;
+            this.btn_ver_tabla_vendedor4.Text = "Ver Tabla vendedor 4";
+            this.btn_ver_tabla_vendedor4.UseVisualStyleBackColor = true;
+            this.btn_ver_tabla_vendedor4.Click += new System.EventHandler(this.btn_ver_tabla_vendedor4_Click);
+            // 
+            // lbl_vendedor1
+            // 
+            this.lbl_vendedor1.AutoSize = true;
+            this.lbl_vendedor1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_vendedor1.Location = new System.Drawing.Point(191, 228);
+            this.lbl_vendedor1.Name = "lbl_vendedor1";
+            this.lbl_vendedor1.Size = new System.Drawing.Size(0, 21);
+            this.lbl_vendedor1.TabIndex = 10;
+            // 
+            // lbl_vendedor2
+            // 
+            this.lbl_vendedor2.AutoSize = true;
+            this.lbl_vendedor2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_vendedor2.Location = new System.Drawing.Point(191, 264);
+            this.lbl_vendedor2.Name = "lbl_vendedor2";
+            this.lbl_vendedor2.Size = new System.Drawing.Size(0, 21);
+            this.lbl_vendedor2.TabIndex = 11;
+            // 
+            // lbl_vendedor3
+            // 
+            this.lbl_vendedor3.AutoSize = true;
+            this.lbl_vendedor3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_vendedor3.Location = new System.Drawing.Point(191, 295);
+            this.lbl_vendedor3.Name = "lbl_vendedor3";
+            this.lbl_vendedor3.Size = new System.Drawing.Size(0, 21);
+            this.lbl_vendedor3.TabIndex = 12;
+            // 
+            // lbl_vendedor4
+            // 
+            this.lbl_vendedor4.AutoSize = true;
+            this.lbl_vendedor4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_vendedor4.Location = new System.Drawing.Point(191, 331);
+            this.lbl_vendedor4.Name = "lbl_vendedor4";
+            this.lbl_vendedor4.Size = new System.Drawing.Size(0, 21);
+            this.lbl_vendedor4.TabIndex = 13;
             // 
             // Entrada_Datos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 288);
+            this.ClientSize = new System.Drawing.Size(519, 373);
+            this.Controls.Add(this.lbl_vendedor4);
+            this.Controls.Add(this.lbl_vendedor3);
+            this.Controls.Add(this.lbl_vendedor2);
+            this.Controls.Add(this.lbl_vendedor1);
+            this.Controls.Add(this.btn_ver_tabla_vendedor4);
+            this.Controls.Add(this.btn_ver_tabla_vendedor3);
+            this.Controls.Add(this.btn_ver_tabla_vendedor2);
+            this.Controls.Add(this.btn_ver_tabla_vendedor1);
             this.Controls.Add(this.btn_ver_tabla);
             this.Controls.Add(this.btn_simular);
             this.Controls.Add(this.txt_hasta);
@@ -178,5 +274,13 @@
         private System.Windows.Forms.TextBox txt_hasta;
         private System.Windows.Forms.Button btn_simular;
         private System.Windows.Forms.Button btn_ver_tabla;
+        private System.Windows.Forms.Button btn_ver_tabla_vendedor1;
+        private System.Windows.Forms.Button btn_ver_tabla_vendedor2;
+        private System.Windows.Forms.Button btn_ver_tabla_vendedor3;
+        private System.Windows.Forms.Button btn_ver_tabla_vendedor4;
+        private System.Windows.Forms.Label lbl_vendedor1;
+        private System.Windows.Forms.Label lbl_vendedor2;
+        private System.Windows.Forms.Label lbl_vendedor3;
+        private System.Windows.Forms.Label lbl_vendedor4;
     }
 }
