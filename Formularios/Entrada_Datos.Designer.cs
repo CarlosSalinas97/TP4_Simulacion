@@ -46,6 +46,7 @@
             this.lbl_vendedor2 = new System.Windows.Forms.Label();
             this.lbl_vendedor3 = new System.Windows.Forms.Label();
             this.lbl_vendedor4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -230,11 +231,23 @@
             this.lbl_vendedor4.Size = new System.Drawing.Size(0, 21);
             this.lbl_vendedor4.TabIndex = 13;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(12, 187);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 30);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Editar prob.";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Entrada_Datos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(519, 373);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_vendedor4);
             this.Controls.Add(this.lbl_vendedor3);
             this.Controls.Add(this.lbl_vendedor2);
@@ -282,5 +295,6 @@
         private System.Windows.Forms.Label lbl_vendedor2;
         private System.Windows.Forms.Label lbl_vendedor3;
         private System.Windows.Forms.Label lbl_vendedor4;
+        private System.Windows.Forms.Button button1;
     }
 }
